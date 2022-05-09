@@ -1,10 +1,15 @@
-import './App.css';
+import "./App.css";
+import Navbar from "./Pages/Shared/Navbar";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <button class="btn btn-primary">Button</button>
-      <button class="btn w-64 rounded-full">Button</button>
+      <Navbar></Navbar>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </div>
   );
 }
