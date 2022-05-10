@@ -5,7 +5,7 @@ import PrimaryButton from "../Shared/PrimaryButton";
 const Contact = () => {
   return (
     <section
-      style={{ background: `url(${appointment})` }}
+      style={{ background: `url(${appointment})`, backgroundSize: `cover` }}
       className="flex justify-center items-center text-center"
     >
       <div className="  px-12 py-12">
