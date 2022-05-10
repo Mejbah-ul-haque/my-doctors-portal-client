@@ -1,26 +1,44 @@
 import React from "react";
 import appointment from "../../assets/images/appointment.png";
+import PrimaryButton from "../Shared/PrimaryButton";
 
 const Contact = () => {
   return (
     <section
       style={{ background: `url(${appointment})` }}
-      className="flex justify-center items-center"
+      className="flex justify-center items-center text-center"
     >
-      <div className="flex-1 hidden lg:block">
-        <img className="mt-[-100px]" src={doctor} alt="" />
-      </div>
-      <div className="flex-1">
-        <h3 className="text-xl text-primary font-bold">Appointment</h3>
-        <h2 className="text-3xl text-white">Make an Appointment Today</h2>
-        <p className="text-white">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis qui
-          aut asperiores excepturi unde, nobis consequuntur eaque ipsa dolor
-          minus, provident ipsum dolorum? Itaque quisquam eius fugit cumque
-          laboriosam aliquid, inventore quae quam dolores tempora perspiciatis
-          ipsum voluptatum omnis numquam!
-        </p>
-        <PrimaryButton>Get started</PrimaryButton>
+      <div className="  px-12 py-12">
+        <h3 className="text-xl text-primary font-bold">Contact Us</h3>
+        <h2 className="text-3xl mb-3 text-white">Stay connected with us</h2>
+        <form className="block">
+          <input
+            className="mb-3 pl-2 w-96 h-8 rounded"
+            type="email"
+            name="email"
+            id=""
+            placeholder="
+          email"
+          />{" "}
+          <br />
+          <input
+            className="mb-3 pl-2 w-96 h-8 rounded"
+            type="text"
+            name="subject"
+            id=""
+            placeholder="subject"
+          />
+          <br />
+          <input
+            className="mb-8 pl-2 w-96 h-24 rounded"
+            type="text-area"
+            name="text-area"
+            id=""
+            placeholder="Your message"
+          />{" "}
+          <br />
+          <PrimaryButton>submit</PrimaryButton>
+        </form>
       </div>
     </section>
   );
