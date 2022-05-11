@@ -15,7 +15,7 @@ const AvailableAppointments = ({ date }) => {
   return (
     <div>
       <h2 className="text-xl text-secondary text-center">
-        Available Appoinments on {format(date, "PP")}
+        Available Appointments on {format(date, "PP")}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {services.map((service) => (
@@ -26,7 +26,13 @@ const AvailableAppointments = ({ date }) => {
           ></Service>
         ))}
       </div>
-      {treatment && <BookingModal treatment={treatment}></BookingModal>}
+      {treatment && (
+        <BookingModal
+          date={date}
+          treatment={treatment}
+          setTreatment={setTreatment}
+        ></BookingModal>
+      )}
     </div>
   );
 };
