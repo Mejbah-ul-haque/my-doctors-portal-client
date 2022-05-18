@@ -28,6 +28,7 @@ const Navbar = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
+      <li>{user && <Link to="/dashboard">Dashboard</Link>}</li>
       <li>
         {user ? (
           <button onClick={logout}>Sign Out</button>
